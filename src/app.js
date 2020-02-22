@@ -84,17 +84,17 @@ app.get('/weather', (req, res) => {
 
 app.get('/help/*', (req, res) => {
     res.render('404', {
-        errorText: 'This help topic cannot be found',
         title: 'Help: 404 Error',
-        name: 'Maria Voigt' 
+        name: 'Maria Voigt', 
+        errorMessage: 'Help article not found.'
 
     })
 })
 app.get('*', (req, res) => {
     res.render('404', {
-        errorText: 'This content doesnt exist',
         title: '404 Error',
-        name: 'Maria Voigt' 
+        name: 'Maria Voigt' ,
+        errorMessage: 'Page not found.'
 
     })
 })
