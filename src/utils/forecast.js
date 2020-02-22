@@ -12,7 +12,7 @@ const forecast = (latitude, longitude, callback)=>{
             callback('Unknown loacation', undefined)
         }
         else{
-            callback(undefined, response.body.daily.data[0].summary + ' It is currently ' + response.body.currently.temperature + '. There is a ' + response.body.currently.precipProbability +'% chance of rain.')
+            callback(undefined, response.body.daily.data[0].summary + ' It is currently ' + response.body.currently.temperature + '. There is a ' + response.body.currently.precipProbability +'% chance of rain. \n Weather for tommorow:' + response.body.daily.data[1].summary)
             
         }
        
